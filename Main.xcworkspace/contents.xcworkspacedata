@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:"
+      name = "Documents">
+      <FileRef
+         location = "group:README.md">
+      </FileRef>
+      <FileRef
+         location = "group:LICENSE.txt">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:"
+      name = "Settings">
+      <FileRef
+         location = "group:.gitignore">
+      </FileRef>
+      <FileRef
+         location = "container:Main.xcworkspace/xcshareddata/IDETemplateMacros.plist">
+      </FileRef>
+   </Group>
+</Workspace>
