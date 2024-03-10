@@ -2,13 +2,6 @@
 <Workspace
    version = "1.0">
    <Group
-      location = "group:Projects"
-      name = "Projects">
-      <FileRef
-         location = "group:Main/Main.xcodeproj">
-      </FileRef>
-   </Group>
-   <Group
       location = "group:"
       name = "Documents">
       <FileRef
@@ -19,13 +12,29 @@
       </FileRef>
    </Group>
    <Group
-      location = "group:"
+      location = "group:Projects"
+      name = "Projects">
+      <FileRef
+         location = "group:Main/Main.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Settings"
       name = "Settings">
       <FileRef
-         location = "group:.gitignore">
+         location = "container:.gitignore">
       </FileRef>
       <FileRef
          location = "container:Main.xcworkspace/xcshareddata/IDETemplateMacros.plist">
+      </FileRef>
+      <FileRef
+         location = "group:Common-Debug.xcconfig">
+      </FileRef>
+      <FileRef
+         location = "group:Common-Release.xcconfig">
+      </FileRef>
+      <FileRef
+         location = "group:Common.xcconfig">
       </FileRef>
    </Group>
 </Workspace>
