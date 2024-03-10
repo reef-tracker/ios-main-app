@@ -2,6 +2,13 @@
 <Workspace
    version = "1.0">
    <Group
+      location = "group:Projects"
+      name = "Projects">
+      <FileRef
+         location = "group:Main/Main.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
       location = "group:"
       name = "Documents">
       <FileRef
