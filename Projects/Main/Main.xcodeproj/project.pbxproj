@@ -16,6 +16,7 @@
 		219603612B9E218300B99217 /* MainApp.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2196035B2B9E218300B99217 /* MainApp.xcassets */; };
 		219603622B9E218300B99217 /* MainApp=App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196035C2B9E218300B99217 /* MainApp=App.swift */; };
 		219603632B9E218300B99217 /* MainView=View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196035E2B9E218300B99217 /* MainView=View.swift */; };
+		219603662B9E25A200B99217 /* AppSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 219603652B9E25A200B99217 /* AppSupport */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				219603662B9E25A200B99217 /* AppSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,8 +99,8 @@
 		2196035D2B9E218300B99217 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				2196035B2B9E218300B99217 /* MainApp.xcassets */,
 				2196035C2B9E218300B99217 /* MainApp=App.swift */,
+				2196035B2B9E218300B99217 /* MainApp.xcassets */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -136,6 +138,9 @@
 			dependencies = (
 			);
 			name = "main-app";
+			packageProductDependencies = (
+				219603652B9E25A200B99217 /* AppSupport */,
+			);
 			productName = "Reef Tracker";
 			productReference = 2196033E2B9E1A3B00B99217 /* reef-tracker.app */;
 			productType = "com.apple.product-type.application";
@@ -167,6 +172,9 @@
 			);
 			mainGroup = 219603332B9E18BB00B99217;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				219603642B9E25A200B99217 /* XCLocalSwiftPackageReference "../../Packages/app-support" */,
+			);
 			productRefGroup = 2196033F2B9E1A3B00B99217 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +266,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		219603642B9E25A200B99217 /* XCLocalSwiftPackageReference "../../Packages/app-support" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../Packages/app-support";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		219603652B9E25A200B99217 /* AppSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 219603342B9E18BB00B99217 /* Project object */;
 }

@@ -12,6 +12,13 @@
       </FileRef>
    </Group>
    <Group
+      location = "group:Packages"
+      name = "Packages">
+      <FileRef
+         location = "group:app-support">
+      </FileRef>
+   </Group>
+   <Group
       location = "group:Projects"
       name = "Projects">
       <FileRef
