@@ -11,7 +11,6 @@
 		219603512B9E1A5E00B99217 /* App-Debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2196034F2B9E1A5E00B99217 /* App-Debug.xcconfig */; };
 		219603522B9E1A5E00B99217 /* App-Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 219603502B9E1A5E00B99217 /* App-Release.xcconfig */; };
 		219603542B9E1A7C00B99217 /* App.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 219603532B9E1A7C00B99217 /* App.xcconfig */; };
-		219603572B9E20AF00B99217 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 219603552B9E20AF00B99217 /* Info.plist */; };
 		219603582B9E20AF00B99217 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 219603562B9E20AF00B99217 /* InfoPlist.xcstrings */; };
 		219603612B9E218300B99217 /* MainApp.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2196035B2B9E218300B99217 /* MainApp.xcassets */; };
 		219603622B9E218300B99217 /* MainApp=App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196035C2B9E218300B99217 /* MainApp=App.swift */; };
@@ -192,7 +191,6 @@
 				2196034A2B9E1A3C00B99217 /* #Preview.xcassets in Resources */,
 				219603582B9E20AF00B99217 /* InfoPlist.xcstrings in Resources */,
 				219603512B9E1A5E00B99217 /* App-Debug.xcconfig in Resources */,
-				219603572B9E20AF00B99217 /* Info.plist in Resources */,
 				219603542B9E1A7C00B99217 /* App.xcconfig in Resources */,
 				219603612B9E218300B99217 /* MainApp.xcassets in Resources */,
 				219603522B9E1A5E00B99217 /* App-Release.xcconfig in Resources */,
