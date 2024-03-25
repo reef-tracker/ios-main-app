@@ -26,7 +26,7 @@ internal struct MainApp: App {
 
 import SwiftData
 
-@Model class NitrateReading {
+@Model class NitrateReadingSchemaV0 {
     var date: Date
     var readingValue: Float64
 
