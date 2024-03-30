@@ -4,6 +4,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 internal struct MainApp: App {
@@ -17,6 +18,9 @@ internal struct MainApp: App {
     internal var body: some Scene {
         WindowGroup {
             MainView()
+                .modelContainer(for: [
+                    NitrateReadingSchemaV0.self
+                ])
         }
     }
 }

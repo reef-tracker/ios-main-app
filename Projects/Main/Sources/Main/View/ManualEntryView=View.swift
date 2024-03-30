@@ -4,11 +4,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ManualEntryView: View {
-    @Binding var nitrateReadings: [NitrateReading]
+    var modelContext: ModelContext
 
     var body: some View {
-        Text("ManualEnteryView")
+        ReadingEntryView(modelContext: modelContext, needsDatePicker: true)
     }
 }

@@ -4,27 +4,30 @@
 //
 
 import SwiftUI
+import SwiftData
 
-struct ReadingEntry: View {
-    @State private var stringInput: String = ""
-    @Binding var nitrateReadings: [NitrateReading]
+struct ReadingEntryView: View {
+    @State private var nitrateReading: String = ""
+    @State private var dateReading: Date = Date()
+    var modelContext: ModelContext
+    let needsDatePicker: Bool
 
     func save() {
-        guard let double = Double(stringInput) else { return }
-        nitrateReadings.append(NitrateReading(nitrateValue: double, readingDate: Date.now))
-    }
-
-    func addCustomInput() {
-
+        guard let nitratePPM = Double(nitrateReading) else { return }
+        modelContext.insert(NitrateReadingSchemaV0(nitrateValue: nitratePPM, date: needsDatePicker ? dateReading : Date.now))
     }
 
     var body: some View {
         VStack {
-            TextField("0.0", text: $stringInput)
+            TextField("0.0", text: $nitrateReading)
                 .keyboardType(.decimalPad)
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 150)
                 .padding(.bottom, 24)
+            if needsDatePicker {
+                DatePicker("Manual Entry Date", selection: $dateReading,
+                           displayedComponents: [.date, .hourAndMinute])
+            }
             HStack {
                 Spacer()
                 Button(action: save) { Text("Save") }

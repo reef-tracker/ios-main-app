@@ -4,9 +4,14 @@
 //
 
 import Foundation
+import SwiftData
 
-struct NitrateReading: Identifiable {
-    var id = UUID().uuidString
-    var nitrateValue: Double
-    var readingDate: Date
+@Model class NitrateReadingSchemaV0 {
+    var nitrateValue: Float64
+    var date: Date
+
+    init(nitrateValue: Double, date: Date) {
+        self.nitrateValue = nitrateValue
+        self.date = date
+    }
 }

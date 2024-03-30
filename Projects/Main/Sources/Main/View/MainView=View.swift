@@ -4,8 +4,7 @@
 //
 
 import SwiftUI
-import Combine
-import Charts
+import SwiftData
 
 #Preview {
     MainView()
@@ -20,8 +19,6 @@ internal struct MainView {
     }
 
     // MARK: MainView - Representation
-
-    /* <#...#> */
 }
 
 extension MainView: View {

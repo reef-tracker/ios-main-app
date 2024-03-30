@@ -260,6 +260,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2196034F2B9E1A5E00B99217 /* App-Debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = Q97LUL2ZLR;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 			};
@@ -269,6 +270,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 219603502B9E1A5E00B99217 /* App-Release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = Q97LUL2ZLR;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 			};

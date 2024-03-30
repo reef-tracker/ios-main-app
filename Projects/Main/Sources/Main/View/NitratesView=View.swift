@@ -4,22 +4,21 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct NitratesView: View {
-    @State private var nitrateReadings = [NitrateReading]()
-    // TODO: effective way to save the readings on deinit
-
+    @Environment(\.modelContext) private var modelContext
 
     var body: some View {
         VStack {
-            ReadingGraph(data: $nitrateReadings)
+            ReadingGraphView()
             HStack {
                 Spacer(minLength: UIScreen.main.bounds.width/4)
-                ReadingEntry(nitrateReadings: $nitrateReadings)
+                ReadingEntryView(modelContext: modelContext, needsDatePicker: false)
                 VStack {
                     Spacer()
                     NavigationLink("Add...") {
-                        ManualEntryView(nitrateReadings: $nitrateReadings)
+                        ManualEntryView(modelContext: modelContext)
                     }
                 }
                 .frame(maxHeight: 100)
