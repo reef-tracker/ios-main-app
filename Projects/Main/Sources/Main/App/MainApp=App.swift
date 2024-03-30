@@ -18,7 +18,7 @@ internal struct MainApp: App {
         WindowGroup {
             MainView()
                 .modelContainer(for: [
-                    NitrateReading.self
+                    NitrateReadingSchemaV0.self
                 ])
         }
     }
