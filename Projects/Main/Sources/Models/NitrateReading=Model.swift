@@ -4,3 +4,9 @@
 //
 
 import Foundation
+
+struct NitrateReading: Identifiable {
+    var id = UUID().uuidString
+    var nitrateValue: Double
+    var readingDate: Date
+}

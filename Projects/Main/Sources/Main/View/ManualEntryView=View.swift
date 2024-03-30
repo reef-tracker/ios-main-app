@@ -3,4 +3,12 @@
 // Copyright information is in the `LICENSE.txt` file at the repository root containing this file.
 //
 
-import Foundation
+import SwiftUI
+
+struct ManualEntryView: View {
+    @Binding var nitrateReadings: [NitrateReading]
+
+    var body: some View {
+        Text("ManualEnteryView")
+    }
+}
