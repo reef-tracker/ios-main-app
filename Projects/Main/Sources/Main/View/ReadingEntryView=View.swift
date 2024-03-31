@@ -6,15 +6,23 @@
 import SwiftUI
 import SwiftData
 
+#Preview {
+    MainView()
+}
+
 struct ReadingEntryView: View {
+    @Environment(\.dismiss) private var dismiss
     @State private var nitrateReading: String = ""
     @State private var dateReading: Date = Date()
     var modelContext: ModelContext
-    let needsDatePicker: Bool
+    let fullInput: Bool
 
     func save() {
         guard let nitratePPM = Double(nitrateReading) else { return }
-        modelContext.insert(NitrateReadingSchemaV0(nitrateValue: nitratePPM, date: needsDatePicker ? dateReading : Date.now))
+        modelContext.insert(NitrateReadingSchemaV0(nitrateValue: nitratePPM, date: fullInput ? dateReading : Date.now))
+        if fullInput {
+            dismiss()
+        }
     }
 
     var body: some View {
@@ -24,9 +32,13 @@ struct ReadingEntryView: View {
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 150)
                 .padding(.bottom, 24)
-            if needsDatePicker {
-                DatePicker("Manual Entry Date", selection: $dateReading,
+            if fullInput {
+                DatePicker("Enter reading:",
+                           selection: $dateReading,
                            displayedComponents: [.date, .hourAndMinute])
+                .datePickerStyle(.graphical)
+                .padding(.horizontal)
+                .padding(.bottom, 48)
             }
             HStack {
                 Spacer()

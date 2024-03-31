@@ -16,7 +16,7 @@ struct LandingView: View {
                     }
                 }
             }
-            .navigationTitle("Welcome to the rodeo")
+            .navigationTitle("Home")
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
         }

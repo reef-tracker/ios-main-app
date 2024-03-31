@@ -6,6 +6,10 @@
 import SwiftUI
 import SwiftData
 
+#Preview {
+    MainView()
+}
+
 struct NitratesView: View {
     @Environment(\.modelContext) private var modelContext
 
@@ -14,7 +18,7 @@ struct NitratesView: View {
             ReadingGraphView()
             HStack {
                 Spacer(minLength: UIScreen.main.bounds.width/4)
-                ReadingEntryView(modelContext: modelContext, needsDatePicker: false)
+                ReadingEntryView(modelContext: modelContext, fullInput: false)
                 VStack {
                     Spacer()
                     NavigationLink("Add...") {
@@ -28,5 +32,6 @@ struct NitratesView: View {
         .toolbarColorScheme(.dark, for: .navigationBar)
         .toolbarBackground(.visible, for: .navigationBar)
         .background(.gray)
+        .navigationTitle("Nitrates")
     }
 }

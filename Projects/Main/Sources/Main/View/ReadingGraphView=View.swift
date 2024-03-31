@@ -7,6 +7,10 @@ import SwiftUI
 import Charts
 import SwiftData
 
+#Preview {
+    MainView()
+}
+
 struct ReadingGraphView: View {
     @Query(sort: \NitrateReadingSchemaV0.date, order: .reverse) var allReadings: [NitrateReadingSchemaV0]
 
@@ -33,7 +37,9 @@ struct ReadingGraphView: View {
                 .foregroundStyle(Color.black) // <= change the style of the line
             }
         }
+        .padding()
         .background(Color(red: 0.83, green: 0.83, blue: 0.83))
         .foregroundColor(.black)
+
     }
 }

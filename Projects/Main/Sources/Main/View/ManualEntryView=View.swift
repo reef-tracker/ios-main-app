@@ -6,10 +6,14 @@
 import SwiftUI
 import SwiftData
 
+#Preview {
+    MainView()
+}
+
 struct ManualEntryView: View {
     var modelContext: ModelContext
 
     var body: some View {
-        ReadingEntryView(modelContext: modelContext, needsDatePicker: true)
+        ReadingEntryView(modelContext: modelContext, fullInput: true)
     }
 }
