@@ -23,6 +23,7 @@ struct ReadingEntryView: View {
         if fullInput {
             dismiss()
         }
+        endTextEditing()
     }
 
     var body: some View {
@@ -50,4 +51,11 @@ struct ReadingEntryView: View {
             .padding(.horizontal)
         }
     }
+}
+
+extension View {
+  func endTextEditing() {
+    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
+                                    to: nil, from: nil, for: nil)
+  }
 }
