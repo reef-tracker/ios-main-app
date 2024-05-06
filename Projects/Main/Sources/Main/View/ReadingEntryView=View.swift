@@ -10,10 +10,15 @@ import SwiftData
     MainView()
 }
 
+
 struct ReadingEntryView: View {
+    enum FocusableField {
+        case textField, calendar
+    }
     @Environment(\.dismiss) private var dismiss
     @State private var nitrateReading: String = ""
     @State private var dateReading: Date = Date()
+    @FocusState private var focusedField: FocusableField?
     var modelContext: ModelContext
     let fullInput: Bool
 
@@ -23,23 +28,36 @@ struct ReadingEntryView: View {
         if fullInput {
             dismiss()
         }
-        endTextEditing()
+        focusedField = nil
     }
 
     var body: some View {
         VStack {
             TextField("0.0", text: $nitrateReading)
+                .focused($focusedField, equals: .textField)
                 .keyboardType(.decimalPad)
                 .textFieldStyle(.roundedBorder)
                 .frame(width: 150)
                 .padding(.bottom, 24)
+                .toolbar {
+                    ToolbarItem(placement: .keyboard) {
+                        HStack {
+                            Spacer()
+                            Button("Done") {
+                                focusedField = nil
+                            }
+                        }
+                    }
+                }
+
             if fullInput {
                 DatePicker("Enter reading:",
                            selection: $dateReading,
-                           displayedComponents: [.date, .hourAndMinute])
+                           displayedComponents: [.date])
+                .focused($focusedField, equals: .calendar)
                 .datePickerStyle(.graphical)
                 .padding(.horizontal)
-                .padding(.bottom, 48)
+                .padding(.bottom, 36)
             }
             HStack {
                 Spacer()
@@ -51,11 +69,4 @@ struct ReadingEntryView: View {
             .padding(.horizontal)
         }
     }
-}
-
-extension View {
-  func endTextEditing() {
-    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
-                                    to: nil, from: nil, for: nil)
-  }
 }
