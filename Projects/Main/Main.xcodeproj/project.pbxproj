@@ -16,6 +16,8 @@
 		219603622B9E218300B99217 /* MainApp=App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196035C2B9E218300B99217 /* MainApp=App.swift */; };
 		219603632B9E218300B99217 /* MainView=View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196035E2B9E218300B99217 /* MainView=View.swift */; };
 		219603662B9E25A200B99217 /* AppSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 219603652B9E25A200B99217 /* AppSupport */; };
+		C4D613182D753E7B00EC2793 /* View-OnGeometryChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D613172D753E7B00EC2793 /* View-OnGeometryChange.swift */; };
+		C4D6131A2D75421800EC2793 /* AnimationExperiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D613192D75421800EC2793 /* AnimationExperiment.swift */; };
 		C4FE8C0B2BB79B1E0033F91C /* LandingView=VIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE8C0A2BB79B1E0033F91C /* LandingView=VIew.swift */; };
 		C4FE8C0D2BB79B4E0033F91C /* NitratesView=View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE8C0C2BB79B4E0033F91C /* NitratesView=View.swift */; };
 		C4FE8C0F2BB79BAD0033F91C /* ManualEntryView=View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE8C0E2BB79BAD0033F91C /* ManualEntryView=View.swift */; };
@@ -36,6 +38,8 @@
 		2196035B2B9E218300B99217 /* MainApp.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = MainApp.xcassets; sourceTree = "<group>"; };
 		2196035C2B9E218300B99217 /* MainApp=App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainApp=App.swift"; sourceTree = "<group>"; };
 		2196035E2B9E218300B99217 /* MainView=View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainView=View.swift"; sourceTree = "<group>"; };
+		C4D613172D753E7B00EC2793 /* View-OnGeometryChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-OnGeometryChange.swift"; sourceTree = "<group>"; };
+		C4D613192D75421800EC2793 /* AnimationExperiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationExperiment.swift; sourceTree = "<group>"; };
 		C4FE8C0A2BB79B1E0033F91C /* LandingView=VIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LandingView=VIew.swift"; sourceTree = "<group>"; };
 		C4FE8C0C2BB79B4E0033F91C /* NitratesView=View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NitratesView=View.swift"; sourceTree = "<group>"; };
 		C4FE8C0E2BB79BAD0033F91C /* ManualEntryView=View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManualEntryView=View.swift"; sourceTree = "<group>"; };
@@ -120,12 +124,13 @@
 		2196035F2B9E218300B99217 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C4D6131B2D77C4E300EC2793 /* Experiments */,
 				C4FE8C0A2BB79B1E0033F91C /* LandingView=VIew.swift */,
 				2196035E2B9E218300B99217 /* MainView=View.swift */,
-				C4FE8C102BB79BE90033F91C /* ReadingEntryView=View.swift */,
-				C4FE8C122BB79BFD0033F91C /* ReadingGraphView=View.swift */,
 				C4FE8C0E2BB79BAD0033F91C /* ManualEntryView=View.swift */,
 				C4FE8C0C2BB79B4E0033F91C /* NitratesView=View.swift */,
+				C4FE8C102BB79BE90033F91C /* ReadingEntryView=View.swift */,
+				C4FE8C122BB79BFD0033F91C /* ReadingGraphView=View.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -137,6 +142,15 @@
 				2196035F2B9E218300B99217 /* View */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		C4D6131B2D77C4E300EC2793 /* Experiments */ = {
+			isa = PBXGroup;
+			children = (
+				C4D613192D75421800EC2793 /* AnimationExperiment.swift */,
+				C4D613172D753E7B00EC2793 /* View-OnGeometryChange.swift */,
+			);
+			path = Experiments;
 			sourceTree = "<group>";
 		};
 		C4FE8C182BB79E2D0033F91C /* Models */ = {
@@ -231,11 +245,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4FE8C1A2BB79E3A0033F91C /* NitrateReading=Model.swift in Sources */,
+				C4D613182D753E7B00EC2793 /* View-OnGeometryChange.swift in Sources */,
 				C4FE8C0B2BB79B1E0033F91C /* LandingView=VIew.swift in Sources */,
 				219603632B9E218300B99217 /* MainView=View.swift in Sources */,
 				219603622B9E218300B99217 /* MainApp=App.swift in Sources */,
 				C4FE8C0D2BB79B4E0033F91C /* NitratesView=View.swift in Sources */,
 				C4FE8C0F2BB79BAD0033F91C /* ManualEntryView=View.swift in Sources */,
+				C4D6131A2D75421800EC2793 /* AnimationExperiment.swift in Sources */,
 				C4FE8C132BB79BFD0033F91C /* ReadingGraphView=View.swift in Sources */,
 				C4FE8C112BB79BE90033F91C /* ReadingEntryView=View.swift in Sources */,
 			);

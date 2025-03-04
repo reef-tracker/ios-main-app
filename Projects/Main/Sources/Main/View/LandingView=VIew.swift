@@ -14,6 +14,9 @@ struct LandingView: View {
                     NavigationLink("Nitrates") {
                         NitratesView()
                     }
+                    NavigationLink("Percent Animation") {
+                        Example10()
+                    }
                 }
             }
             .navigationTitle("Home")
